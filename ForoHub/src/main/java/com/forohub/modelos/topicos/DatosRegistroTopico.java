@@ -11,8 +11,8 @@ public record DatosRegistroTopico(
        String titulo,
        @NotBlank
        String mensaje,
-       @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-       LocalDateTime fecha,
+       @NotBlank
+       String fecha,
        @NotNull
        Boolean status,
        @NotBlank

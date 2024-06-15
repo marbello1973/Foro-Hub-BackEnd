@@ -2,12 +2,14 @@ package com.forohub.modelos.topicos;
 
 import jakarta.validation.constraints.NotNull;
 
+import java.time.LocalDateTime;
+
 public record ActualizarTopicoDTO(
         @NotNull
         Long id,
         String titulo,
         String mensaje,
-        String fecha,
+        LocalDateTime fecha,
         String autor
 
 ){}

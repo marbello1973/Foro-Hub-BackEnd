@@ -40,7 +40,7 @@ public class Topicos {
         if(actualizarTopicoDTO.autor() != null) this.autor = actualizarTopicoDTO.autor();
         if(actualizarTopicoDTO.titulo() != null)  this.titulo = actualizarTopicoDTO.titulo();
         if(actualizarTopicoDTO.mensaje() != null) this.mensaje = actualizarTopicoDTO.mensaje();
-        if(actualizarTopicoDTO.fecha() != null) this.mensaje = actualizarTopicoDTO.fecha();
+        if(actualizarTopicoDTO.fecha() != null) this.mensaje = String.valueOf(actualizarTopicoDTO.fecha());
 
     }
 

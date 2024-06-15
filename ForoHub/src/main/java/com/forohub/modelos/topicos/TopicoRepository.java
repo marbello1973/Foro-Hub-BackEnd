@@ -6,6 +6,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 public interface TopicoRepository extends JpaRepository<Topicos, Long> {
-    Page<Topicos> findByActivoTrue(Pageable paginacion);
-    Boolean findActivoById(Long idTopico);
+    Page<Topicos> findByStatusTrue(Pageable paginacion);
+    Boolean findStatusById(Long idTopico);
 }

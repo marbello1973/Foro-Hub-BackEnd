@@ -1,5 +1,7 @@
 package com.forohub.modelos.topicos;
 
+import java.time.LocalDateTime;
+
 public record TopicoDTO(
         Long id,
         String titulo,

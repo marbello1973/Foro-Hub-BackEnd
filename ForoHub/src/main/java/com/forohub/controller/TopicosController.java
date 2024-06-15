@@ -51,7 +51,7 @@ public class TopicosController {
             @PageableDefault(size = 20) Pageable paginacion
     ){
         //return medicoRepository.findAll(paginacion).map(MedicoDTO::new);
-        return ResponseEntity.ok(topicoRepository.findByActivoTrue(paginacion).map(TopicoDTO::new));
+        return ResponseEntity.ok(topicoRepository.findByStatusTrue(paginacion).map(TopicoDTO::new));
     }
 
     @PutMapping
@@ -68,8 +68,8 @@ public class TopicosController {
         return ResponseEntity.ok(new DatosRespuestaTopico(
                 topicos.getTitulo(),
                 topicos.getMensaje(),
-                topicos.getAutor(),
-                topicos.getFecha()
+                topicos.getFecha(),
+                topicos.getAutor()
                 ));
     }
 
