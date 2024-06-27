@@ -62,7 +62,7 @@ Consultar todos los registros en base de datos
 | Parametros | Typo     | Descripcion               |
 | :-------- | :------- | :------------------------- |
 | `No` | `GET` | **Requerido** estar autenticado |
-
+---
 > ![GET](https://img.shields.io/badge/metodo-GET-green.svg)
 Consultar registros por identificador unico ID
 ```http
@@ -71,7 +71,7 @@ Consultar registros por identificador unico ID
 | Parametros | Typo     | Descripcion                       |
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `GET` | **Requerido** estar autenticado y pasar el id en la url |
-
+---
 > ![POST](https://img.shields.io/badge/metodo-POST-blue.svg) 
 Crear un registro  
 ```http
@@ -80,7 +80,7 @@ Crear un registro
 | Parametros | Typo     | Descripcion                       |
 | :-------- | :------- | :-------------------------------- |
 | `No`      | `POST` | **Requerido** estar autenticado    |
-
+---
 > ![PUT](https://img.shields.io/badge/metodo-PUT-1abc9c.svg) 
 Actualizar un registro
 ```http
@@ -89,7 +89,7 @@ Actualizar un registro
 | Parametros | Typo     | Descripcion                       |
 | :-------- | :------- | :-------------------------------- |
 | `No`      | `PUT` | **Requerido** estar autenticado, id en el cuerpo del JSON |
-
+---
 > ![DELETE](https://img.shields.io/badge/metodo-DELETE-red.svg)
 Deshabilitar un registro
 ```http
@@ -98,6 +98,7 @@ Deshabilitar un registro
 | Parametros | Typo     | Descripcion                       |
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `DELETE` | **Requerido** estar autenticado, id en la url |
+___
 
 
 
