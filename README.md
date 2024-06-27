@@ -56,9 +56,9 @@ Autenticación y Seguridad
 
 > ![GET](https://img.shields.io/badge/metodo-GET-yellow.svg)
 Consultar todos los registros en base de datos
-`http
+```http
   GET /topicos
-`
+```
 | Parametros | Typo     | Descripcion               |
 | :-------- | :------- | :------------------------- |
 | `No` | `GET` | **Requerido** estar autenticado |
