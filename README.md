@@ -7,7 +7,7 @@ For Hub API proporciona servicios para la plataforma For Hub, permitiendo la ges
 - Autenticación con JWT y BCrypt
 - Swagger para documentación de la API
 - Configuración mediante archivos .yml
-- Insomnia y Postman para probar la API
+- Insomnia o Postman para probar la API
 
 ### URLs Importantes
 - Endpoint Autenticacion: [http://localhost:8080/login](http://localhost:8080/login)
