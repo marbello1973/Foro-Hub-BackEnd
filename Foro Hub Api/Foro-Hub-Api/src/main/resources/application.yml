@@ -1,0 +1,37 @@
+#spring.application.name=Foro-Hub-Api
+spring:
+  profile.active: dev, test, prod
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/forohub
+    username: root
+    password: 5610
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+    url: jdbc:mysql://localhost/forohub
+    user: root
+    password: 5610
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+#logging:
+#  level:
+#    org:
+#      springframework: DEBUG
+
+server:
+  error:
+    include-stacktrace: never
+
+api:
+  services:
+    security:
+      secret: 123456 #${JWT_SECRET}
+
