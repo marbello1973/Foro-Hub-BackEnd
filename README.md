@@ -42,15 +42,67 @@ spring:
     username: root
     password: tu_password
 ```
-Acceso a la API
+### Acceso a la API
 Accede a Swagger UI para ver la documentación detallada de la API.
+> _Swagger UI: [http://localhost:8080/swagger-ui/index.html#/](http://localhost:8080/swagger-ui/index.html#/)_
 
 Autenticación y Seguridad
-La API utiliza JWT para la autenticación y BCrypt para el cifrado de contraseñas. Asegúrate de incluir el token JWT en las cabeceras de tus peticiones protegidas.
+* La API utiliza JWT para la autenticación y BCrypt para el cifrado de contraseñas. 
+* Por default te puedes autenticar con el email david@gmail.com y password 123456
+* Asegúrate de incluir el token JWT en las cabeceras de tus peticiones protegidas.
 
-Endpoints Principales
-GET /topicos: Obtiene todos los tópicos disponibles.
-POST /topicos: Crea un nuevo tópico.
-PUT /topicos/{id}: Actualiza un tópico existente.
-DELETE /topicos/{id}: Deshabilita un tópico por su ID.
-Consulta la documentación completa en Swagger UI.
+
+### Endpoints Principales
+
+> ![GET](https://img.shields.io/badge/metodo-GET-yellow.svg)
+Consultar todos los registros en base de datos
+```http
+  GET /topicos
+```
+| Parametros | Typo     | Descripcion               |
+| :-------- | :------- | :------------------------- |
+| `No` | `GET` | **Requerido** estar autenticado |
+
+> ![GET](https://img.shields.io/badge/metodo-GET-green.svg)
+Consultar registros por identificador unico ID
+```http
+  GET /topico/${id}
+```
+| Parametros | Typo     | Descripcion                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `GET` | **Requerido** estar autenticado y pasar el id en la url |
+
+> ![POST](https://img.shields.io/badge/metodo-POST-blue.svg) 
+Crear un registro  
+```http
+  POST /topico
+```
+| Parametros | Typo     | Descripcion                       |
+| :-------- | :------- | :-------------------------------- |
+| `No`      | `POST` | **Requerido** estar autenticado    |
+
+> ![PUT](https://img.shields.io/badge/metodo-PUT-1abc9c.svg) 
+Actualizar un registro
+```http
+  PUT /topico/${id}
+```
+| Parametros | Typo     | Descripcion                       |
+| :-------- | :------- | :-------------------------------- |
+| `No`      | `PUT` | **Requerido** estar autenticado, id en el cuerpo del JSON |
+
+> ![DELETE](https://img.shields.io/badge/metodo-DELETE-red.svg)
+Deshabilitar un registro
+```http
+  DELETE /topico/${id}
+```
+| Parametros | Typo     | Descripcion                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `DELETE` | **Requerido** estar autenticado, id en la url |
+
+
+
+
+
+
+  
+
